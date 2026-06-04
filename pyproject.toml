@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "taichi-router"
+version = "0.1.0"
+description = "TaiChi-Router: An Oriental-Numerology-Inspired MoE Dynamic Routing Engine"
+readme = "README.md"
+license = {text = "Apache-2.0"}
+authors = [
+    {name = "TaiChi-Quantum Team", email = "sun-yongji@users.noreply.github.com"}
+]
+keywords = ["moe", "mixture-of-experts", "routing", "deep-learning", "ai-infrastructure"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+requires-python = ">=3.9"
+dependencies = [
+    "numpy>=1.21.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "black>=23.0",
+    "ruff>=0.1.0",
+]
+torch = ["torch>=2.0.0"]
+all = [
+    "taichi-router[torch]",
+]
+
+[project.urls]
+Homepage = "https://github.com/sun-yongji/taichi-router"
+Repository = "https://github.com/sun-yongji/taichi-router.git"
+Issues = "https://github.com/sun-yongji/taichi-router/issues"

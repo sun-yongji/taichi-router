@@ -1,0 +1,107 @@
+# TaiChi-Router (太极矩阵·MoE路由引擎)
+
+**Dynamic Mixture-of-Experts routing engine with hexagonal-topology-aware gating.**
+
+[![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
+[![License](https://img.shields.io/badge/license-Apache%202.0-green.svg)](LICENSE)
+[![PyTorch](https://img.shields.io/badge/PyTorch-optional-orange.svg)](https://pytorch.org/)
+
+## Overview
+
+TaiChi-Router is the first open-source MoE (Mixture-of-Experts) routing engine that incorporates **topological constraints from Oriental numerology** into modern deep learning infrastructure. It maps the **60-degree hexagonal symmetry** (C6 group) of the Early Heaven Bagua (先天八卦) onto a practical, pluggable expert gating system.
+
+> *From the hexagon topology of the cosmos, we discovered structural optimization opportunities neglected by conventional routing.*
+
+### Why TaiChi-Router?
+
+Traditional MoE routers use simple softmax gating — experts compete blindly. TaiChi-Router introduces **three-mode dynamic routing** based on input coupling strength:
+
+| Mode | Coupling | Behavior | Template (E1:E2:E3) |
+|------|----------|----------|---------------------|
+| **Steady** | < 0.5 | Balanced expert mix for stable inputs | 0.5 : 0.3 : 0.2 |
+| **Transitional** | 0.5 ~ 1.5 | Shifting allocation for changing inputs | 0.4 : 0.4 : 0.2 |
+| **Perturbation** | ≥ 1.5 | Vortex-dominant routing for chaotic inputs | 0.3 : 0.3 : 0.4 |
+
+## Quick Start
+
+```python
+from taichi_router import TaiChiRouter, create_default_experts
+import numpy as np
+
+# Create router with default three-expert set
+router = TaiChiRouter()
+
+# Register the three canonical experts
+for expert in create_default_experts():
+    router.register_expert(
+        name=expert.name,
+        condition_fn=expert.condition,
+        forward_fn=expert.forward,
+        priority=expert.priority,
+    )
+
+# Route an input
+data = np.random.randn(100)
+result = router(data)
+
+print(f"Mode: {result.mode.value}")
+print(f"Coupling: {result.coupling_strength:.3f}")
+for name, weight, output in result.selected_experts:
+    print(f"  {name}: weight={weight:.3f}")
+```
+
+## Installation
+
+```bash
+pip install taichi-router
+```
+
+For PyTorch integration:
+```bash
+pip install taichi-router[torch]
+```
+
+## Features
+
+- **Pluggable Experts**: Register any callable as an expert with condition and forward functions
+- **5 Routing Strategies**: ThreeRegime, EntropyMax, HexagonalGating, AdaptiveThreshold, and custom
+- **PyTorch Integration**: Wrap `nn.Module` as routable experts with `TorchExpert`
+- **Entropy-Balanced Normalization**: Prevents expert collapse during training
+- **Hexagonal Topology Projection**: C6 symmetry-constrained gating for structured sparsity
+
+## Architecture
+
+```
+Input → CouplingStrength → RoutingMode → Template+Conditions → NormalizedWeights → ExpertOutputs
+         |                    |
+    compute_coupling()   detect_routing_mode()
+                              |
+                    STEADY / TRANSITIONAL / PERTURBATION
+```
+
+## Documentation
+
+- [API Reference](docs/api.md)
+- [Strategy Guide](docs/strategies.md)
+- [Examples](examples/)
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## License
+
+Apache 2.0 — see [LICENSE](LICENSE).
+
+## Citation
+
+If you use TaiChi-Router in your research:
+
+```bibtex
+@software{taichi_router_2026,
+  author = {TaiChi-Quantum Team},
+  title = {TaiChi-Router: An Oriental-Numerology-Inspired MoE Dynamic Routing Engine},
+  year = {2026},
+  url = {https://github.com/sun-yongji/taichi-router},
+}
+```
