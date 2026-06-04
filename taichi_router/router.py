@@ -319,6 +319,9 @@ class TaiChiRouter:
         """
         self._experts: Dict[str, ExpertSpec] = {}
         self._coupling_fn = coupling_fn or compute_coupling_strength
+        # Accept string shorthand (e.g. "entropy_balanced") or enum directly
+        if isinstance(normalization, str):
+            normalization = NormalizationMethod(normalization)
         self._normalization = normalization
         self._entropy_comp = entropy_comp
         self._min_experts_active = min_experts_active
@@ -506,4 +509,5 @@ class TaiChiRouter:
     def __repr__(self) -> str:
         n = len(self._experts)
         experts = ", ".join(self._experts.keys())
-        return f"TaiChiRouter(experts=[{experts}], normalization={self._normalization.value})"
+        norm = self._normalization.value if isinstance(self._normalization, NormalizationMethod) else str(self._normalization)
+        return f"TaiChiRouter(experts=[{experts}], normalization={norm})"
