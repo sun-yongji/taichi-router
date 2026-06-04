@@ -1,0 +1,35 @@
+# Bytecode
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Build artifacts
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Testing
+.pytest_cache/
+htmlcov/
+.coverage
+*.cover
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Distribution
+*.whl
