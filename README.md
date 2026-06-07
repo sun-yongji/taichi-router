@@ -1,3 +1,5 @@
+﻿[![CI](https://github.com/sun-yongji/taichi-router/actions/workflows/ci.yml/badge.svg)](https://github.com/sun-yongji/taichi-router/actions/workflows/ci.yml)
+
 # TaiChi-Router ⚡ C6群论驱动的MoE动态路由引擎
 
 > 华为云杯2026 OPC大赛  |  太极矩阵 M1  |  Apache 2.0
