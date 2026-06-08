@@ -1,4 +1,4 @@
-﻿[![CI](https://github.com/sun-yongji/taichi-router/actions/workflows/ci.yml/badge.svg)](https://github.com/sun-yongji/taichi-router/actions/workflows/ci.yml)
+[![CI](https://github.com/sun-yongji/taichi-router/actions/workflows/ci.yml/badge.svg)](https://github.com/sun-yongji/taichi-router/actions/workflows/ci.yml)
 
 # TaiChi-Router ⚡ C6群论驱动的MoE动态路由引擎
 
@@ -71,7 +71,7 @@ TaiChi-Router 是太极矩阵六站体系的第一站：
 
 本项目为「华为云杯」2026人工智能OPC应用创新大赛参赛作品。OPC（一人开发者）轻量化架构，pip一行安装，无重型依赖。
 
-技术白皮书：[太极矩阵技术白皮书](https://docs.qq.com/aio/DTldDRGpIbGdseG1H)
+技术白皮书：[太极矩阵技术白皮书(中文)](https://docs.qq.com/aio/DTldDRGpIbGdseG1H) | [WHITEPAPER.md (English)](https://github.com/sun-yongji/taichi-matrix/blob/master/WHITEPAPER.md)
 
 ## 许可
 
