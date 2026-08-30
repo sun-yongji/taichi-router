@@ -2,11 +2,11 @@
 
 # TaiChi-Router ⚡ C6群论驱动的MoE动态路由引擎
 
-> 2026 上海开源软件应用创新大赛 | TaiChi Matrix M1 | Apache-2.0
+> 2026 上海开源软件应用创新大赛 | TaiChi Matrix M1 | CC-BY-SA-4.0
 
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/)
 [![Tests](https://img.shields.io/badge/tests-26/26-brightgreen.svg)]()
-[![License](https://img.shields.io/badge/license-Apache--2.0-green.svg)](LICENSE)
+[![License](https://img.shields.io/badge/license-CC--BY--SA--4.0-green.svg)](LICENSE)
 
 ## 核心创新
 
@@ -75,4 +75,4 @@ TaiChi-Router 是TaiChi Matrix 六模块工具链的第一站：
 
 ## 许可
 
-Apache-2.0 · 易宇本源研究中心 · 2026
+CC-BY-SA-4.0 · 易宇本源研究中心 · 2026
