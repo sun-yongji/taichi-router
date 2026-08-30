@@ -2,11 +2,11 @@
 
 # TaiChi-Router ⚡ C6群论驱动的MoE动态路由引擎
 
-> 华为云杯2026 OPC大赛  |  太极矩阵 M1  |  CC-BY-SA-4.0
+> 2026 上海开源软件应用创新大赛 | TaiChi Matrix M1 | Apache-2.0
 
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/)
 [![Tests](https://img.shields.io/badge/tests-26/26-brightgreen.svg)]()
-[![License](https://img.shields.io/badge/license-CC--BY--SA--4.0-green.svg)](LICENSE)
+[![License](https://img.shields.io/badge/license-Apache--2.0-green.svg)](LICENSE)
 
 ## 核心创新
 
@@ -54,9 +54,9 @@ print(f"Mode: {result.mode.value}, Coupling: {result.coupling_strength:.3f}")
 | Transitional 过渡 | 0.5~1.5 | ω^2 周期3子群 | 相位旋转分配，适合变化输入 |
 | Perturbation 扰动 | ≥1.5 | ω^1 全周期生成元 | 涡旋主导路由，适合混沌输入 |
 
-## 太极矩阵体系
+## TaiChi Matrix 工具链体系
 
-TaiChi-Router 是太极矩阵六站体系的第一站：
+TaiChi-Router 是TaiChi Matrix 六模块工具链的第一站：
 
 | 站 | 仓库 | 功能 |
 |----|------|------|
@@ -69,10 +69,10 @@ TaiChi-Router 是太极矩阵六站体系的第一站：
 
 ## 参赛
 
-本项目为「华为云杯」2026人工智能OPC应用创新大赛参赛作品。OPC（一人开发者）轻量化架构，pip一行安装，无重型依赖。
+本项目为2026 上海开源软件应用创新大赛（开源AI工具赛道）参赛作品。轻量化架构，pip一行安装，无重型依赖。
 
 技术白皮书：[太极矩阵技术白皮书(中文)](https://docs.qq.com/aio/DTldDRGpIbGdseG1H) | [WHITEPAPER.md (English)](https://github.com/sun-yongji/taichi-matrix/blob/master/WHITEPAPER.md)
 
 ## 许可
 
-CC-BY-SA-4.0 · 易宇本源研究中心 · 2026
+Apache-2.0 · 易宇本源研究中心 · 2026

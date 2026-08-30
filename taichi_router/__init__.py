@@ -1,5 +1,5 @@
 """
-TaiChi-Router: An Oriental-Numerology-Inspired MoE Dynamic Routing Engine.
+TaiChi-Router: A Group-Theory-Driven MoE Dynamic Routing Engine.
 
 Key components:
 - :class:`TaiChiRouter` — Core routing engine

@@ -1,5 +1,5 @@
 """
-TaiChi-Router: An Oriental-Numerology-Inspired MoE Dynamic Routing Engine.
+TaiChi-Router: A Group-Theory-Driven MoE Dynamic Routing Engine.
 
 Core routing engine that implements dynamic expert allocation based on
 input field characteristics. Inspired by the Three-Expert architecture
@@ -8,8 +8,8 @@ from the TaiChi S-Field coupling dynamics model:
   - E2: Dynamics expert (transitional state tracking)
   - E3: Vortex expert (strong-perturbation mode handling)
 
-The routing logic maps the 60-degree hexagonal topology principle
-of the Early Heaven Bagua (先天八卦) onto a modern MoE gating mechanism,
+The routing logic maps the 60-degree hexagonal topology of the C6
+rotation group onto a modern MoE gating mechanism,
 where expert weight distribution follows the coupling strength of
 input features rather than static softmax assignment.
 """
@@ -36,7 +36,7 @@ except ImportError:
 # ---------------------------------------------------------------------------
 
 # The universal hexagonal topology angle (60 degrees), derived from
-# the Early Heaven Bagua symmetry group C6.
+# the C6 rotation symmetry group.
 HEX_TOPOLOGY_ANGLE_DEG: float = 60.0
 HEX_TOPOLOGY_ANGLE_RAD: float = math.radians(HEX_TOPOLOGY_ANGLE_DEG)
 
