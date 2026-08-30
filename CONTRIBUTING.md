@@ -78,4 +78,4 @@ TaiChi-Router 是太极矩阵六站体系的 M1 站。关联仓库：
 
 ## 许可证
 
-CC-BY-SA-4.0
+Apache-2.0
